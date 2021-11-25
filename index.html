@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
-    <link rel="shortcut icon" type="image" href="https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png">
+    <link rel="shortcut icon" type="image" href="assets/img/cat.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.4-web/css/all.css">
 </head>
 <body>
     <div id="main">
         <div id="header">
             <!-- Begin Nav -->
-            <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+            <ul id="nav" class="js-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#band-section">Band</a></li>
+                <li><a href="#tour-section">Tour</a></li>
+                <li><a href="#contact-section">Contact</a></li>
                 <li>
-                    <a href="">
+                    <span>
                         More
                         <i class="fas fa-caret-down"></i>
-                    </a>
+                    </span>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#social">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -36,6 +37,11 @@
                 <i class="search fas fa-search"></i>
             </div>
             <!-- End Search -->
+            <!-- Menu btn  -->
+            <div class="menu-btn js-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
         </div>
 
         <div id="slider">
@@ -48,7 +54,8 @@
         </div>
 
         <div id="content">
-            <div class="content-section">
+            <!-- About section -->
+            <div id="band-section" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -203,35 +210,13 @@
         </div>
     </div>
 
-    <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal =   document.querySelector('.js-modal')
-        const closeModal = document.querySelector('.js-modal-close')
-        const modalContainer = document.querySelector('.js-modal-container')
-        
-        function showBuyTickets() {
-            modal.classList.add('open')
-        }
 
-        function closeBuyTickets() {
-            modal.classList.remove('open')
-        }
-        
-        for (const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTickets)
-        }
-        closeModal.addEventListener('click', closeBuyTickets)
-        modal.addEventListener('click', closeBuyTickets)
-        modalContainer.addEventListener('click', function (event) {
-            event.stopPropagation()
-        })
-
-    </script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
 <footer>
-    <div class="social-list">
+    <div id="social" class="social-list">
         <a href="https://www.facebook.com/HoangQuan2311"><i class="fab fa-facebook-square"></i></a>
         <a href=""><i class="fab fa-instagram"></i></a>
         <a href=""><i class="fab fa-snapchat-square"></i></a>
