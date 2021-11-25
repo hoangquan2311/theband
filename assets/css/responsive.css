@@ -1,0 +1,81 @@
+/* PC  */
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 740px) and (max-width: 1023) {
+
+}
+
+@media (max-width: 739px) {
+    
+    #header {
+        
+    }
+
+    #nav {
+        position: absolute;
+        top: 46px;
+        left: 50%;
+        right: 0;
+        background-color: #000;
+        animation: menuHide ease .2s ;
+        transform: translateX(100%);
+    }
+
+    #nav::before {
+        /* display: none; */
+    }
+
+    #nav.open {
+        display: block;
+        animation: menuShow ease .3s;
+        transform: translateX(0);
+    }
+    
+    #nav > li {
+        display: block;
+    }
+
+    #header .search-btn {
+        float: left;
+    }
+
+    #header .menu-btn {
+        float: right;
+        display: block;
+        line-height: 46px;
+        padding: 0 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #header .menu-btn:hover {
+        background-color: #ccc;
+        color: #000;
+    }
+
+    .text-content {
+        display: none;
+    }
+}
+
+@keyframes menuShow {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes menuHide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
