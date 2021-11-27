@@ -24,13 +24,14 @@ modalContainer.addEventListener('click', function (event) {
 // Mobile Menu 
 var nav = document.querySelector('.js-nav')
 var menuBtn = document.querySelector('.js-menu-btn')
+var body = document.getElementsByTagName('body')
 
 function openMenu() {
-    if (nav.classList.contains('open')){
-        nav.classList.remove('open')
+    if (nav.style.transform == 'translateX(-100%)'){
+        nav.style.transform = 'translateX(0)'
     }
     else {
-    nav.classList.add('open')
+        nav.style.transform = 'translateX(-100%)'
     }
 }
 
@@ -42,4 +43,5 @@ var menuItems = document.querySelectorAll('#nav li a')
 for (var menuItem of menuItems) {
     menuItem.addEventListener('click', openMenu)
 }
+
 
