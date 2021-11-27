@@ -310,6 +310,7 @@ html {
     text-decoration: none;
     text-align: center;
     line-height: 38px;
+    border-radius: 5px;
 }
 
 /* Modal  */

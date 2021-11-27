@@ -72,9 +72,17 @@
         margin-bottom: 16px;
     }
 
+    .place-buy-btn {
+        width: 100%;
+    }
+
     #content .contact-info,
     #content .contact-form,
     #content .mobile-form {
+        width: 100%;
+    }
+
+    .contact-form .form-submit-btn {
         width: 100%;
     }
 }
